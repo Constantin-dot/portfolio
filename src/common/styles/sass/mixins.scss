@@ -1,0 +1,37 @@
+@import "variables";
+
+@mixin text($fontWeight, $fontSize, $lineHeight, $color) {
+  font-family: $fontFamily;
+  font-weight: $fontWeight;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  letter-spacing: 1.4px;
+  color: $color;
+}
+
+@mixin block($min-height, $background-color) {
+  min-height: $min-height;
+  background-color: $background-color;
+  display: flex;
+}
+
+@mixin container($width, $margin) {
+  width: $width;
+  margin: $margin;
+  //border: 1px solid $titleColor;
+  display: flex;
+  box-sizing: border-box;
+}
+
+@mixin link($backColor) {
+  width: 70px;
+  height: 70px;
+  background-color: $backColor;
+  margin: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  border-bottom: 6px solid #ccc;
+}

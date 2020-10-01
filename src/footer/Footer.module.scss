@@ -1,0 +1,42 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
+.block {
+  @include block(30vh, $bgColor);
+  justify-content: center;
+
+  .container {
+    @include container(80%, 30px auto);
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+
+      @media screen and (max-width: 475px) {
+        justify-content: center;
+      }
+
+      .link1 {
+        @include link(darkgrey);
+      }
+
+      .link2 {
+        @include link($primaryColor);
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+
+
+
+
