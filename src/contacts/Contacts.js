@@ -5,19 +5,6 @@ import {useFormik} from "formik";
 import axios from "axios";
 
 const Contacts = () => {
-    /*let form = document.querySelector("#contact-form")
-    form.addEventListener("submit", (e) => {
-        e.preventDefault()
-
-        axios.post("http://smtp-nodejs-constantin-server.herokuapp.com/sendMessage", {
-            contact: form.querySelector("#contact").value,
-            name: form.querySelector("#name").value,
-            message: form.querySelector("#message").value
-        })
-            .then(() => {
-                alert("your message has been sent")
-            })
-    })*/
 
     const formik = useFormik({
         initialValues: {
@@ -26,16 +13,15 @@ const Contacts = () => {
             message: '',
         },
         onSubmit: values => {
-            axios.post("http://smtp-nodejs-constantin-server.herokuapp.com/sendMessage", {
-                contact: formik.values.contact,
-                name: formik.values.name,
-                message: formik.values.message
+            axios.post("http://localhost:3010/sendMessage", {
+                contact: values.contact,
+                name: values.name,
+                message: values.message
             })
                 .then(() => {
                     alert("your message has been sent")
                 })
-            alert(JSON.stringify(values));
-        },
+        }
     });
 
     return(
