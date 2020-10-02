@@ -13,7 +13,7 @@ const Contacts = () => {
             message: '',
         },
         onSubmit: values => {
-            axios.post("http://localhost:3010/sendMessage", {
+            axios.post("https://smtp-constantin-server.herokuapp.com/sendMessage", {
                 contact: values.contact,
                 name: values.name,
                 message: values.message
