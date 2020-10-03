@@ -21,10 +21,12 @@
 
       .link1 {
         @include link(darkgrey);
+        @include icon(40px, $bgColor);
       }
 
       .link2 {
         @include link($primaryColor);
+        @include icon(40px, $bgColor);
       }
     }
 

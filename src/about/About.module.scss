@@ -24,115 +24,102 @@
 
       .facts {
         margin: 0 auto;
-        //max-width: 800px;
         position: relative;
         width: 100%;
         height: 300px;
+        display: flex;
+        justify-content: space-around;
+        @media screen and (max-width: 700px) {
+          flex-wrap: wrap;
+        }
 
+        .cube {
+          min-width: 30%;
+          margin-bottom: 40px;
+          position: relative;
 
-        .fact {
-          position: absolute;
-          width: 50px;
-          height: 4px;
-          z-index: 1;
-          top: 50%;
-          left: 50%;
-          margin-left: -25px;
-          margin-top: -2px;
-
-          &::before {
-            content: '';
-            position: absolute; /* Абсолютное позиционирование */
-            //left: 20px;
-            //bottom: -20px; /* Положение треугольника */
-            //border: 10px solid transparent; /* Прозрачные границы */
-            //border-top: 10px solid green; /* Добавляем треугольник */
-            left: -50px;
-            bottom: 2px;
-            border: 90px solid transparent;
-            border-bottom: 90px solid $primaryColor;
-            margin-left: -90px;
-            height: 0;
-            width: 0;
-            pointer-events: none;
-            opacity: 0.3;
-
-
-            //border-bottom-color: $primaryColor;
-            //border-width: 90px;
-            //margin-left: -90px;
-            //bottom: 2px;
-            //left: 50%;
-            //content: " ";
-            //height: 0;
-            //width: 0;
-            //position: absolute;
-            //pointer-events: none;
-            //opacity: 0.3;
-
-          }
-
-          .topLeft {
-            transform: rotate(45deg);
-            top: -50px;
-            left: -90%;
+          .fact {
             position: absolute;
-            background: #fff;
-            z-index: -1;
-            width: 1px;
-            height: 50px;
-            opacity: 0.5;
-          }
-
-          .topRight {
-            transform: rotate(-45deg);
-            top: 50px;
-            right: 100%;
-            position: absolute;
-            background: #fff;
-            z-index: -1;
-            width: 1px;
-            height: 50px;
-            opacity: 0.5;
-          }
-
-          .bottomLeft {
-            transform: rotate(45deg);
-            bottom: -50px;
-            right: -90%;
-            position: absolute;
-            background: #fff;
-            z-index: -1;
-            width: 1px;
-            height: 50px;
-            opacity: 0.5;
-          }
-
-          .bottomRight {
-            transform: rotate(-45deg);
-            bottom: 50px;
-            left: 100%;
-            position: absolute;
-            background: #fff;
-            z-index: -1;
-            width: 1px;
-            height: 50px;
-            opacity: 0.5;
-          }
-
-          &::after {
-            border-top-color: #54BABB;
-            border-width: 90px;
-            margin-left: -90px;
-            top: 2px;
+            background-color: $titleColor;
+            width: 50px;
+            height: 4px;
+            z-index: 1;
+            top: 50%;
             left: 50%;
-            //border: solid transparent;
-            content: " ";
-            height: 0;
-            width: 0;
-            position: absolute;
-            pointer-events: none;
-            opacity: 0.3;
+            margin-left: -25px;
+            margin-top: -2px;
+            display: flex;
+            flex-direction: column;
+
+            &::before {
+              content: '';
+              position: absolute;
+              left: -64px;
+              bottom: 2px;
+              border: 90px solid transparent;
+              border-bottom: 90px solid $primaryColor;
+              opacity: 0.3;
+            }
+
+            .topLeft {
+              transform: rotate(45deg);
+              top: -50px;
+              left: -90%;
+              position: absolute;
+              background: #fff;
+              z-index: -1;
+              width: 1px;
+              height: 50px;
+              opacity: 0.5;
+            }
+
+            .topRight {
+              transform: rotate(-45deg);
+              top: 50px;
+              right: 100%;
+              position: absolute;
+              background: #fff;
+              z-index: -1;
+              width: 1px;
+              height: 50px;
+              opacity: 0.5;
+            }
+
+            .bottomLeft {
+              transform: rotate(45deg);
+              bottom: -50px;
+              right: -90%;
+              position: absolute;
+              background: #fff;
+              z-index: -1;
+              width: 1px;
+              height: 50px;
+              opacity: 0.5;
+            }
+
+            .bottomRight {
+              transform: rotate(-45deg);
+              bottom: 50px;
+              left: 100%;
+              position: absolute;
+              background: #fff;
+              z-index: -1;
+              width: 1px;
+              height: 50px;
+              opacity: 0.5;
+            }
+
+            &::after {
+              top: 2px;
+              position: absolute;
+              pointer-events: none;
+              content: '';
+              left: -64px;
+              border: 90px solid transparent;
+              border-top: 90px solid $primaryColor;
+              opacity: 0.3;
+            }
+
           }
 
           .num {
@@ -143,6 +130,7 @@
             font-weight: bold;
             font-family: 'Istok Web', sans-serif;
             text-shadow: 0 18px 2px rgba(41, 41, 41, .3);
+            width: 100%;
           }
 
           h6 {
@@ -156,22 +144,25 @@
             display: block;
             font-weight: bold;
           }
+
         }
 
       }
 
       .photo {
-        width: 650px;
-        height: 450px;
+        width: 80%;
+        height: 550px;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        //position: relative;
         border-radius: 8px;
         border: 1px solid #ccc;
         border-bottom: 6px solid #ccc;
-        //z-index: 3;
         margin-bottom: 30px;
+        @media screen and (max-width: 1025px) {
+          width: 100%;
+          height: 400px;
+        }
       }
     }
   }

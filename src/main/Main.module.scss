@@ -17,16 +17,9 @@
       width: 80%;
     }
     .link {
-      height: 30px;
-      width: 300px;
-      padding: 10px;
-      margin-bottom: 8px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      border-bottom: 6px solid #ccc;
-      @include text(400, 1em, 1.2, $titleColor);
-      @media screen and (max-width: 650px) {
-        width: 70px;
+      @include button();
+      @media screen and (max-width: 600px) {
+        width: 183px;
       }
       a {
         text-decoration: none;

@@ -13,6 +13,10 @@
   border: 1px solid #ccc;
   border-bottom: 6px solid #ccc;
   position: relative;
+  @media screen and (max-width: 1090px) {
+    margin-bottom: 20px;
+  }
+
 
   .icon {
     width: 100%;
@@ -37,21 +41,15 @@
     }
 
     .button {
-      background-color: $titleColor;
-      width: 70px;
-      height: 30px;
-      margin: 10px;
-      position: relative;
       z-index: 1;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      border-bottom: 6px solid #ccc;
-      @include text(600, 0.9em, 1.2, $textColor);
+      @include button();
+      @media screen and (max-width: 600px) {
+        width: 183px;
+      }
     }
   }
 
   .projectInfo {
-    /*padding: 25px 20px;*/
     .projectTitle {
       @include text(600, 0.9em, 1.2, $primaryColor);
     }

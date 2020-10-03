@@ -31,51 +31,45 @@ const About = () => {
                         in reprehenderit in voluptate velit esse cillum dolore eu fugiat.
                     </p>
                     <div className={style.facts}>
-                        <div className={style.fact}>
-                            <span className={style.topLeft}>
-
-                            </span>
-                            <span className={style.topRight}>
-
-                            </span>
-                            <span className={style.bottomLeft}>
-
-                            </span>
-                            <span className={style.bottomRight}>
-
-                            </span>
+                        <div className={style.cube}>
+                            <div className={style.fact}>
+                                <span className={style.topLeft}>
+                                </span>
+                                <span className={style.topRight}>
+                                </span>
+                                <span className={style.bottomLeft}>
+                                </span>
+                                <span className={style.bottomRight}>
+                                </span>
+                            </div>
                             <div className={style.num}>8</div>
                             <h6>Used technologies</h6>
                         </div>
-                        <div className={style.fact}>
-                            <span className={style.topLeft}>
-
-                            </span>
-                            <span className={style.topRight}>
-
-                            </span>
-                            <span className={style.bottomLeft}>
-
-                            </span>
-                            <span className={style.bottomRight}>
-
-                            </span>
+                        <div className={style.cube}>
+                            <div className={style.fact}>
+                                <span className={style.topLeft}>
+                                </span>
+                                <span className={style.topRight}>
+                                </span>
+                                <span className={style.bottomLeft}>
+                                </span>
+                                <span className={style.bottomRight}>
+                                </span>
+                            </div>
                             <div className={style.num}>3</div>
                             <h6>made projects</h6>
                         </div>
-                        <div className={style.fact}>
-                            <span className={style.topLeft}>
-
-                            </span>
-                            <span className={style.topRight}>
-
-                            </span>
-                            <span className={style.bottomLeft}>
-
-                            </span>
-                            <span className={style.bottomRight}>
-
-                            </span>
+                        <div className={style.cube}>
+                            <div className={style.fact}>
+                                <span className={style.topLeft}>
+                                </span>
+                                <span className={style.topRight}>
+                                </span>
+                                <span className={style.bottomLeft}>
+                                </span>
+                                <span className={style.bottomRight}>
+                                </span>
+                            </div>
                             <div className={style.num}>1000</div>
                             <h6>more then 1000 hours of practice</h6>
                         </div>
