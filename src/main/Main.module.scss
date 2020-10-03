@@ -4,7 +4,7 @@
 .mainBlock {
   @include block(100vh, $primaryColor);
 
-  @media screen and (max-width: 705px) {
+  @media screen and (max-width: 1030px) {
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -13,13 +13,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    @media screen and (max-width: 705px) {
+    @media screen and (max-width: 600px) {
       width: 80%;
     }
+
     .link {
       @include button();
       @media screen and (max-width: 600px) {
-        width: 183px;
+        width: 100%;
       }
       a {
         text-decoration: none;
@@ -33,19 +34,22 @@
     @include container(50%, 30px 20px);
     justify-content: space-around;
     align-items: center;
-    @media screen and (max-width: 785px) {
+    @media screen and (max-width: 1700px) {
       flex-wrap: wrap;
-      width: 80%;
+      //width: 100%;
+    }
+    @media screen and (max-width: 1030px) {
+      width: 100%;
     }
 
     .text {
-      width: 300px;
-      @include text(400, 1.2em, 1.2, $titleColor);
+      min-width: 300px;
+      @include text(400, 2em, 1.2, $titleColor);
     }
 
     .photo {
-      width: 300px;
-      height: 400px;
+      width: 50%;
+      height: 650px;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -54,20 +58,26 @@
       border: 1px solid #ccc;
       border-bottom: 6px solid #ccc;
       z-index: 3;
-
-      &::after {
-        z-index: -1;
-        position: absolute;
-        content: "";
-        bottom: 10px;
-        left: 10px;
-        width: 50%;
-        top: 80%;
-        max-width: 350px;
-        box-shadow: 0 15px 10px #000;
-        transform: rotate(-3deg);
-        opacity: 0.5;
+      @media screen and (max-width: 1700px) {
+        width: 80%;
       }
+      @media screen and (max-width: 1030px) {
+        height: 800px;
+      }
+
+      //&::after {
+      //  z-index: -1;
+      //  position: absolute;
+      //  content: "";
+      //  bottom: 10px;
+      //  left: 10px;
+      //  width: 50%;
+      //  top: 80%;
+      //  max-width: 350px;
+      //  box-shadow: 0 15px 10px #000;
+      //  transform: rotate(-3deg);
+      //  opacity: 0.5;
+      //}
 
     }
   }

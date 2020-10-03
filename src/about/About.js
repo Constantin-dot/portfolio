@@ -57,7 +57,7 @@ const About = () => {
                                 </span>
                             </div>
                             <div className={style.num}>3</div>
-                            <h6>made projects</h6>
+                            <h6>Made projects</h6>
                         </div>
                         <div className={style.cube}>
                             <div className={style.fact}>
@@ -71,7 +71,8 @@ const About = () => {
                                 </span>
                             </div>
                             <div className={style.num}>1000</div>
-                            <h6>more then 1000 hours of practice</h6>
+                            <h6>More then 1000 <br/>
+                            hours of practice</h6>
                         </div>
                     </div>
                     <div className={style.photo} style={running}>

@@ -6,7 +6,7 @@
   position: relative;
 
   h2 {
-    @include text(400, 2.2em, 1.2, $titleColor);
+    @include text(400, 3em, 1.2, $titleColor);
     margin: 0;
   }
 

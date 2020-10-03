@@ -8,13 +8,15 @@ const Contacts = () => {
 
     const formik = useFormik({
         initialValues: {
-            contact: '',
+            email: '',
+            phoneNumber: '',
             name: '',
             message: '',
         },
         onSubmit: values => {
             axios.post("https://smtp-constantin-server.herokuapp.com/sendMessage", {
-                contact: values.contact,
+                email: values.email,
+                phoneNumber: values.phoneNumber,
                 name: values.name,
                 message: values.message
             })
@@ -32,7 +34,12 @@ const Contacts = () => {
                     <input
                         className={style.input}
                         placeholder={"your email"}
-                        {...formik.getFieldProps("contact")}
+                        {...formik.getFieldProps("email")}
+                    />
+                    <input
+                        className={style.input}
+                        placeholder={"your phone number"}
+                        {...formik.getFieldProps("phoneNumber")}
                     />
                     <input
                         className={style.input}

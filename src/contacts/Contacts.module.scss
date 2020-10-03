@@ -18,28 +18,28 @@
       align-items: center;
 
       .input {
-        min-height: 40px;
-        width: 250px;
+        min-height: 80px;
+        width: 400px;
         border-radius: 8px;
         border: 1px solid #ccc;
         border-bottom: 6px solid #ccc;
         text-align: center;
         margin-bottom: 15px;
-        @include text(600, 0.9em, 1.2, $textColor);
+        @include text(600, 2em, 1.2, $textColor);
         @media screen and (max-width: 600px) {
           width: 100%;
         }
       }
 
       .textarea {
-        min-height: 60px;
-        width: 250px;
+        min-height: 100px;
+        width: 400px;
         border-radius: 8px;
         border: 1px solid #ccc;
         border-bottom: 6px solid #ccc;
         text-align: center;
         margin-bottom: 15px;
-        @include text(600, 0.9em, 1.2, $textColor);
+        @include text(600, 2em, 1.2, $textColor);
         @media screen and (max-width: 600px) {
           width: 100%;
         }

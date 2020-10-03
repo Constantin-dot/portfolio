@@ -26,14 +26,15 @@ app.get('/', function (req, res) {
 });
 
 app.post('/sendMessage', async function (req, res) {
-    let {message, contact, name} = req.body;
-    let info = await transporter.sendMail({
+    let {email, phoneNumber, name, message} = req.body;
+    await transporter.sendMail({
         from: "My profile page",
         to: "konstantinkspb@gmail.com",
         subject: "New response",
         html: `<b>Message from your portfolio page</b>
                <div>name: ${name}</div>
-               <div>contact: ${contact}</div>
+               <div>email: ${email}</div>
+               <div>phone number: ${phoneNumber}</div>
                <div>message: ${message}</div>`
     });
 
