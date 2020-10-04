@@ -43,18 +43,24 @@ app.get('/', function (req, res) {
 
 app.post('/sendMessage', async function (req, res) {
     let {email, phoneNumber, name, message} = req.body;
-    await transporter.sendMail({
-        from: "My profile page",
-        to: "konstantinkspb@gmail.com",
-        subject: "New response",
-        html: `<b>Message from your portfolio page</b>
+    try {
+        await transporter.sendMail({
+            from: "My profile page",
+            to: "konstantinkspb@gmail.com",
+            subject: "New response",
+            html: `<b>Message from your portfolio page</b>
                <div>name: ${name}</div>
                <div>email: ${email}</div>
                <div>phone number: ${phoneNumber}</div>
                <div>message: ${message}</div>`
-    });
+        });
+        res.send("ok");
+    } catch (err) {
+        console.log(err)
+        res.send(err);
+    }
 
-    res.send("ok");
+
 });
 
 let port = process.env.PORT || 3010;
