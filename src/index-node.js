@@ -31,6 +31,7 @@ let smtp_password = process.env.SMTP_PASSWORD;
 
 let transporter = nodemailer.createTransport({
     service: "gmail",
+
     auth: {
         user: smtp_login,
         pass: smtp_password

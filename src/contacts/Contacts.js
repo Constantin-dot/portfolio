@@ -34,6 +34,7 @@ const Contacts = () => {
                     <input
                         className={style.input}
                         placeholder={"your email"}
+                        onFocus={true}
                         {...formik.getFieldProps("email")}
                     />
                     <input

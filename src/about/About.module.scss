@@ -38,9 +38,11 @@
 
         .cube {
           min-width: 30%;
-          //margin-bottom: 40px;
           position: relative;
           margin: 20px 10px;
+          @media screen and (max-width: 460px) {
+            margin: 60px 30px;
+          }
 
           .fact {
             position: absolute;

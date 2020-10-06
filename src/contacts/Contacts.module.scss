@@ -18,11 +18,12 @@
       align-items: center;
 
       .input {
+        background-color: $primaryColor;
         min-height: 80px;
         width: 400px;
         border-radius: 8px;
-        border: 1px solid #ccc;
-        border-bottom: 6px solid #ccc;
+        border: 1px solid $titleColor;
+        border-bottom: 6px solid $titleColor;
         text-align: center;
         margin-bottom: 15px;
         @include text(600, 2em, 1.2, $textColor);
@@ -32,11 +33,12 @@
       }
 
       .textarea {
+        background-color: $primaryColor;
         min-height: 100px;
         width: 400px;
         border-radius: 8px;
-        border: 1px solid #ccc;
-        border-bottom: 6px solid #ccc;
+        border: 1px solid $titleColor;
+        border-bottom: 6px solid $titleColor;
         text-align: center;
         margin-bottom: 15px;
         @include text(600, 2em, 1.2, $textColor);
