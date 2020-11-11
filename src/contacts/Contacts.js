@@ -14,12 +14,7 @@ const Contacts = () => {
             message: '',
         },
         onSubmit: values => {
-            axios.post("https://smtp-constantin-server.herokuapp.com/sendMessage", {
-                email: values.email,
-                phoneNumber: values.phoneNumber,
-                name: values.name,
-                message: values.message
-            })
+            axios.post("https://smtp-constantin-server.herokuapp.com/sendMessage", values)
                 .then(() => {
                     alert("your message has been sent")
                 })
